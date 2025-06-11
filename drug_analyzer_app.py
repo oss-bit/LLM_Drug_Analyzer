@@ -29,9 +29,9 @@ class SentenceTransformerEmbeddings(Embeddings):
 
 embedding = SentenceTransformerEmbeddings("sentence-transformers/all-MiniLM-L6-v2")
 
-groq_api_key = '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'  # Add your Groq API key here
+ # Add your Groq API key here
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
-llm = ChatGroq(temperature=0, groq_api_key=groq_api_key, model_name='llama3-8b-8192')
+llm = ChatGroq(temperature=0, model_name='llama3-8b-8192')
 
 # System prompt for research topic recommendation
 SYSTEM_PROMPT = """You are an expert pharmaceutical advisor and drug information specialist with deep knowledge in pharmacology, clinical medicine, and drug safety. You help people understand medications by analyzing drug literature, clinical data, and pharmaceutical resources.
